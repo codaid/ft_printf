@@ -6,7 +6,7 @@
 #    By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/16 15:14:49 by gsaid             #+#    #+#              #
-#    Updated: 2021/12/18 01:28:45 by gsaid            ###   ########.fr        #
+#    Updated: 2022/05/23 19:12:32 by gsaid            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ SRC		=	ft_printf.c\
 			src/ft_list.c\
 			src/ft_libft_printf.c\
 			src/ft_utils_p1.c\
-			src/ft_utils_p2.c
+			src/ft_utils_p2.c\
+			src/ft_hex.c\
+			src/ft_bin.c
 
 OBJS	=	$(SRC:.c=.o)
 
@@ -28,7 +30,8 @@ CFLAGS	=	-Wall -Werror -Wextra
 all :	$(NAME)
 
 test : $(NAME)
-	$(CC) main.c $(NAME)
+	@$(CC) main.c $(NAME)
+	@./a.out
 
 dev :	${OBJS}
 	@$(CC) $(CFLAGS) $(OBJS)

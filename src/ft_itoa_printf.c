@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 14:35:13 by gsaid             #+#    #+#             */
-/*   Updated: 2021/12/18 01:22:34 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 18:27:50 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,3 @@ char	*ft_itoa_printf(long long int n)
 	}
 	return (res);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	int	i = -42;
-// 	char *str;
-
-// 	str = ft_itoa_printf(i);
-// 	printf("str : %s", str);
-// 	free(str);
-// 	return (0);
-// }

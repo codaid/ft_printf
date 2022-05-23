@@ -6,19 +6,19 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 02:00:11 by gsaid             #+#    #+#             */
-/*   Updated: 2021/12/18 01:29:51 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 19:06:30 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		g_len_writed = 0;
-t_pf	*g_list = NULL;
-char	*g_base = "cspdiuxX%";
+int g_len_writed = 0;
+t_pf *g_list = NULL;
+char *g_base = "cspdiuxX%";
 
-static void	ft_print_arg(char c, va_list *ap)
+static void ft_print_arg(char c, va_list *ap)
 {
-	t_pf	*tmp;
+	t_pf *tmp;
 
 	tmp = g_list;
 	while (tmp->next && tmp->car != c)
@@ -27,10 +27,10 @@ static void	ft_print_arg(char c, va_list *ap)
 		tmp->pf(ap);
 }
 
-int	ft_printf(const char *s, ...)
+int ft_printf(const char *s, ...)
 {
-	va_list	ap;
-	int		i;
+	va_list ap;
+	int i;
 
 	g_len_writed = 0;
 	if (!create_list())
@@ -59,8 +59,8 @@ int	ft_printf(const char *s, ...)
 // {
 // 	// ft_printf(" %s %s %s %s %s \n", " - ", "", "4", "", "2 ");
 // 	// printf(" %s %s %s %s %s \n", " - ", "", "4", "", "2 ");
-// 	ft_printf("%i", -42);
+// 	ft_printf("%x", -42);
 // 	ft_printf("\n");
-// 	printf("%d", -42);
+// 	printf("%x", -42);
 // 	return (0);
 // }
