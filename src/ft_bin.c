@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:59:11 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 20:38:43 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 21:15:16 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int	ft_nbr_bit(long long int nbr)
 		need++;
 	}
 	if (need < 8)
-		return 8;
+		return (8);
 	else if (need < 16)
-		return 16;
+		return (16);
 	else if (need < 32)
-		return 32;
-	return 64;
+		return (32);
+	return (64);
 }
 
 void	ft_bin_neg(char *bin)
@@ -80,7 +80,7 @@ static int	ft_btodec(char *nbr)
 			pow *= 2;
 		res += pow * (nbr[i] - '0');
 	}
-	return res;
+	return (res);
 }
 
 char	*ft_btohex(char *bin, int nbrBit, char *base)

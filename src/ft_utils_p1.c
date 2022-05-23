@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 12:17:54 by gsaid             #+#    #+#             */
-/*   Updated: 2021/12/18 02:16:23 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 21:09:38 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,6 @@ void	ft_print_s(va_list *ap)
 	len = ft_strlen(str);
 	write(1, str, len);
 	g_len_writed += len;
-}
-
-void	ft_print_p(va_list *ap)
-{
-	int		nbr;
-	int		len;
-	char	*str;
-
-	nbr = va_arg(*ap, int);
-	if (!nbr)
-		return ;
-	len = ft_power(nbr);
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return ;
-	ft_inttohex(str, nbr, len - 1, "0123456789abcdef");
-	str[len] = '\0';
-	write(1, "0x", 2);
-	write(1, str, len);
-	g_len_writed += len + 2;
-	free(str);
 }
 
 void	ft_print_d(va_list *ap)

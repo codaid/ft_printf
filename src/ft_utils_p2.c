@@ -6,13 +6,13 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 19:52:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 21:02:40 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 21:14:49 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-extern int g_len_writed;
+extern int	g_len_writed;
 
 static void	ft_print_hex(long int nbr, char *base)
 {
@@ -37,29 +37,41 @@ static void	ft_print_hex(long int nbr, char *base)
 	g_len_writed += len;
 }
 
-void ft_print_x(va_list *ap)
+void	ft_print_x(va_list *ap)
 {
-	long int nbr;
+	long int	nbr;
 
 	nbr = va_arg(*ap, long int);
 	if (!nbr && nbr != 0)
-		return;
+		return ;
 	ft_print_hex(nbr, "0123456789abcdef");
 }
 
-void ft_print_x_maj(va_list *ap)
+void	ft_print_x_maj(va_list *ap)
 {
-	long int nbr;
+	long int	nbr;
 
 	nbr = va_arg(*ap, long int);
 	if (!nbr && nbr != 0)
-		return;
+		return ;
 	ft_print_hex(nbr, "0123456789ABCDEF");
 }
 
-void ft_print_percent(va_list *ap)
+void	ft_print_p(va_list *ap)
 {
-	char car;
+	long int	nbr;
+
+	nbr = va_arg(*ap, long int);
+	if (!nbr && nbr != 0)
+		return ;
+	write(1, "0x", 2);
+	g_len_writed += 2;
+	ft_print_hex(nbr, "0123456789abcdef");
+}
+
+void	ft_print_percent(va_list *ap)
+{
+	char	car;
 
 	(void)ap;
 	car = '%';

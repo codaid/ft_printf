@@ -6,11 +6,12 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:17:03 by gsaid             #+#    #+#             */
-/*   Updated: 2021/12/19 18:52:55 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/05/23 21:12:25 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
 extern int	g_len_writed;
 
 char	*ft_strchr(const char *s, int c)
