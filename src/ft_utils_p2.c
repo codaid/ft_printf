@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 19:52:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 21:14:49 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 11:15:36 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_print_x(va_list *ap)
 {
 	long int	nbr;
 
-	nbr = va_arg(*ap, long int);
+	nbr = va_arg(*ap, unsigned int);
 	if (!nbr && nbr != 0)
 		return ;
 	ft_print_hex(nbr, "0123456789abcdef");
@@ -51,7 +51,7 @@ void	ft_print_x_maj(va_list *ap)
 {
 	long int	nbr;
 
-	nbr = va_arg(*ap, long int);
+	nbr = va_arg(*ap, unsigned int);
 	if (!nbr && nbr != 0)
 		return ;
 	ft_print_hex(nbr, "0123456789ABCDEF");

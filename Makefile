@@ -6,7 +6,7 @@
 #    By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/16 15:14:49 by gsaid             #+#    #+#              #
-#    Updated: 2022/05/23 21:21:51 by gsaid            ###   ########.fr        #
+#    Updated: 2022/06/08 10:54:08 by gsaid            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ norm :
 	norminette *.c src/*.c
 
 %.o :	%.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) -o $@ -c $<
+	# $(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME) :	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
