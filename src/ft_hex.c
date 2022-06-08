@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 23:52:53 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 20:45:52 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 14:10:34 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_get_hex(long int nbr, char *base)
 	return (hex);
 }
 
-void	ft_print_hex_pos(long long int nbr, char *base)
+void	ft_print_hex_pos(unsigned long int nbr, char *base)
 {
 	if (nbr >= 16)
 		ft_print_hex_pos(nbr / 16, base);

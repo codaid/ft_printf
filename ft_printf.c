@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 02:00:11 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/08 11:16:33 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 14:27:07 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,16 @@ int	ft_printf(const char *s, ...)
 	return (g_len_writed);
 }
 
-/*
-#include <stdio.h>
-#include <limits.h>
-int main(void)
-{
-	ft_printf(" %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	// ft_printf(" %x\n", LONG_MAX);
-	printf("----printf----\n");
-	// printf(" %x\n", LONG_MAX);
-	printf(" %x %x %x %x %x %x %x", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	return (0);
-}
-*/
+
+// #include <stdio.h>
+// #include <limits.h>
+// int main(void)
+// {
+// 	printf("\n\n");
+
+// 	printf(" %p %p \n", 0, 0);
+// 	ft_printf(" %p %p \n", 0, 0);
+
+// 	printf("\n\n");
+// 	return (0);
+// }

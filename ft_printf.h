@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 17:23:13 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 19:09:29 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 14:11:08 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_nbr_bit(long long int nbr);
 // ft_hex
 void ft_copy_n_char(char *src, char *dst, int nbr);
 char *ft_get_hex(long int nbr, char *base);
-void ft_print_hex_pos(long long int nbr, char *base);
+void ft_print_hex_pos(unsigned long int nbr, char *base);
 
 // Function libft
 char *ft_itoa_printf(long long int n);
