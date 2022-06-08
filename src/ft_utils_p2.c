@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 19:52:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/08 11:15:36 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 11:21:09 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_print_p(va_list *ap)
 {
 	long int	nbr;
 
-	nbr = va_arg(*ap, long int);
+	nbr = va_arg(*ap, unsigned int);
 	if (!nbr && nbr != 0)
 		return ;
 	write(1, "0x", 2);
