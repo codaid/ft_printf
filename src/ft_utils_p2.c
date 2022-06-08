@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 19:52:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/08 14:40:17 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/08 15:30:14 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,10 @@ extern int	g_len_writed;
 
 static void	ft_print_hex(unsigned long int nbr, char *base)
 {
-	// char	*hex;
-	// int		len;
-
 	if (nbr >= 16)
-		ft_print_hex_pos(nbr / 16, base);
+		ft_print_hex(nbr / 16, base);
 	write(1, &base[nbr % 16], 1);
 	g_len_writed++;
-	// if (nbr == -2147483648)
-	// {
-	// 	write(1, "80000000", 8);
-	// 	g_len_writed += 8;
-	// 	return ;
-	// }
-	// if (nbr >= 0)
-	// {
-		// ft_print_hex_pos(nbr, base);
-		// return ;
-	// }
-	// hex = ft_get_hex(nbr, base);
-	// len = ft_strlen(hex);
-	// write(1, hex, len);
-	// free(hex);
-	// g_len_writed += len;
 }
 
 void	ft_print_x(va_list *ap)

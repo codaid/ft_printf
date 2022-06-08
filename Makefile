@@ -6,7 +6,7 @@
 #    By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/16 15:14:49 by gsaid             #+#    #+#              #
-#    Updated: 2022/06/08 14:39:45 by gsaid            ###   ########.fr        #
+#    Updated: 2022/06/08 15:48:32 by gsaid            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,7 @@ SRC		=	ft_printf.c\
 			src/ft_list.c\
 			src/ft_libft_printf.c\
 			src/ft_utils_p1.c\
-			src/ft_utils_p2.c\
-			src/ft_hex.c\
-			src/ft_bin.c
+			src/ft_utils_p2.c
 
 OBJS	=	$(SRC:.c=.o)
 
@@ -38,7 +36,8 @@ dev :	${OBJS}
 	@./a.out
 
 norm :
-	norminette *.c src/*.c
+	@norminette *.c src/*.c
+	@norminette -R CheckDefine *.h
 
 %.o :	%.c
 	# $(CC) -o $@ -c $<
