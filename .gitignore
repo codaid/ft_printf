@@ -1,8 +1,0 @@
-pft/
-printfTester/
-*/*.o
-*.o
-OLD
-.vscode
-.DS_Store
-.git
