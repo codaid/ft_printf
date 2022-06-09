@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:17:03 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 21:12:25 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/09 13:01:13 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ int	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_power(long long int nbr)
-{
-	int	i;
+// int	ft_power(long long int nbr)
+// {
+// 	int	i;
 
-	i = 0;
-	while (nbr > 0)
-	{
-		i++;
-		nbr /= 16;
-	}
-	return (i);
-}
+// 	i = 0;
+// 	while (nbr > 0)
+// 	{
+// 		i++;
+// 		nbr /= 16;
+// 	}
+// 	return (i);
+// }
 
 void	ft_inttohex(char *str, int nbr, int ind, char *base)
 {

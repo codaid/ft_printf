@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:16:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/05/23 21:07:22 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/09 13:10:14 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ static t_pf	*create_item(char c, void (*f)(va_list *))
 {
 	t_pf	*new;
 
-	new = malloc(sizeof(t_pf));
+	new = malloc(sizeof(*new));
 	if (!new)
 		return (NULL);
 	new->car = c;
 	new->pf = f;
+	new->next = NULL;
 	return (new);
 }
 
@@ -44,13 +45,15 @@ static t_pf	*add_item(t_pf *list, t_pf *new_add)
 
 static int	ft_list_len(t_pf *list)
 {
-	int	len;
+	int		len;
+	t_pf	*tmp;
 
 	len = 0;
-	if (!list)
+	tmp = list;
+	if (!tmp)
 		return (0);
-	while (++len && list->next)
-		list = list->next;
+	while (++len && tmp->next)
+		tmp = tmp->next;
 	return (len);
 }
 
@@ -68,4 +71,19 @@ int	create_list(void)
 	if (!ft_list_len(g_list))
 		return (0);
 	return (1);
+}
+
+void	ft_clear_list(t_pf *list)
+{
+	t_pf	*tmp;
+
+	if (!list)
+		return ;
+	while (list && list->next)
+	{
+		tmp = list;
+		list = list->next;
+		free(tmp);
+	}
+	free(list);
 }

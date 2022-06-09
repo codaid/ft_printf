@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 02:00:11 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/08 15:52:09 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/09 13:03:33 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	ft_printf(const char *s, ...)
 			g_len_writed++;
 		}
 	}
+	ft_clear_list(g_list);
 	va_end(ap);
 	return (g_len_writed);
 }
