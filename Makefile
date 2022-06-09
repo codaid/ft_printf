@@ -36,11 +36,10 @@ dev :	${OBJS}
 	@./a.out
 
 norm :
-	@norminette *.c src/*.c
+	@norminette -R CheckForbiddenSourceHeader *.c src/*.c
 	@norminette -R CheckDefine *.h
 
 %.o :	%.c
-	# $(CC) -o $@ -c $<
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(NAME) :	$(OBJS)
