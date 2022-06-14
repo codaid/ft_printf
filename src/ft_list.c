@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:16:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/14 14:37:55 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/14 15:49:57 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,5 @@ void	ft_clear_list(t_pf *list)
 		list = list->next;
 		if (tmp)
 			free(tmp);
-		else
-			printf("it is null\n");
 	}
 }
