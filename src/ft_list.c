@@ -6,15 +6,13 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:16:06 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/09 13:10:14 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/14 14:37:55 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-extern t_pf	*g_list;
-
-static t_pf	*create_item(char c, void (*f)(va_list *))
+static t_pf	*create_item(char c, void (*f)(va_list *ap, int *g_len_writed))
 {
 	t_pf	*new;
 
@@ -57,8 +55,11 @@ static int	ft_list_len(t_pf *list)
 	return (len);
 }
 
-int	create_list(void)
+t_pf	*create_list(void)
 {
+	t_pf	*g_list;
+
+	g_list = NULL;
 	g_list = add_item(g_list, create_item('c', &ft_print_c));
 	g_list = add_item(g_list, create_item('s', &ft_print_s));
 	g_list = add_item(g_list, create_item('p', &ft_print_p));
@@ -69,8 +70,8 @@ int	create_list(void)
 	g_list = add_item(g_list, create_item('X', &ft_print_x_maj));
 	g_list = add_item(g_list, create_item('%', &ft_print_percent));
 	if (!ft_list_len(g_list))
-		return (0);
-	return (1);
+		return (NULL);
+	return (g_list);
 }
 
 void	ft_clear_list(t_pf *list)
@@ -79,11 +80,13 @@ void	ft_clear_list(t_pf *list)
 
 	if (!list)
 		return ;
-	while (list && list->next)
+	while (list)
 	{
 		tmp = list;
 		list = list->next;
-		free(tmp);
+		if (tmp)
+			free(tmp);
+		else
+			printf("it is null\n");
 	}
-	free(list);
 }

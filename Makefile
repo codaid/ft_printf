@@ -6,11 +6,12 @@
 #    By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/16 15:14:49 by gsaid             #+#    #+#              #
-#    Updated: 2022/06/08 15:48:32 by gsaid            ###   ########.fr        #
+#    Updated: 2022/06/14 15:24:00 by gsaid            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	gcc
+CCTEST	=	gcc -fsanitize=address -g3 -Wall -Wextra -Werror
 
 NAME	=	libftprintf.a
 
@@ -26,10 +27,6 @@ OBJS	=	$(SRC:.c=.o)
 CFLAGS	=	-Wall -Werror -Wextra
 
 all :	$(NAME)
-
-test : $(NAME)
-	@$(CC) main.c $(NAME)
-	@./a.out
 
 dev :	${OBJS}
 	@$(CC) $(CFLAGS) $(OBJS)
