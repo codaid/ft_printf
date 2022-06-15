@@ -6,7 +6,7 @@
 /*   By: gsaid <gsaid@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 02:00:11 by gsaid             #+#    #+#             */
-/*   Updated: 2022/06/14 15:27:45 by gsaid            ###   ########.fr       */
+/*   Updated: 2022/06/15 14:52:09 by gsaid            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,28 +50,3 @@ int	ft_printf(const char *s, ...)
 	va_end(ap);
 	return (g_len_writed);
 }
-
-// #include <stdio.h>
-// #include "ft_printf.h"
-
-// int	main(void)
-// {
-// 	int	i;
-// 	int	j;
-
-// 	ft_printf("popo %c%c%c\n", 'a', 'b', 0);
-// 	ft_printf("test : %s", "salut");
-// 	ft_printf("%c%c%c\n", 'a', 'z', 0);
-// 	i = printf("%c%c%c\n", 'a', 'z', 'd');
-// 	j = ft_printf("%c%c%c\n", 'a', 'z', 'd');
-// 	ft_printf("vrai printf %d\n", i);
-// 	ft_printf("my printf %d\n", j);
-// 	ft_printf("%c%c%c", 'a', 0, 'z');
-// 	ft_printf("x : %x\n", i);
-// 	ft_printf("x : %X\n", i);
-// 	i = ft_printf(" NULL %s NULL \n", "");
-// 	j = printf(" NULL %s NULL \n", "");
-// 	printf("My print : %d\n", i);
-// 	printf("They're print : %d\n", j);
-// 	return (0);
-// }
